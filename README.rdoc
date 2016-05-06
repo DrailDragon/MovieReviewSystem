@@ -1,0 +1,13 @@
+== MultiAspect Reviews
+
+Database Systems Lab Project
+
+=> Work left
+  * Search
+  * Sort wrt ratings
+  * fix ratings load
+  
+=> Enable search
+  * Install elastic search
+  * rake searchkick:reindex CLASS=Movie
+  * 

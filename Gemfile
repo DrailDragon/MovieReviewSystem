@@ -1,0 +1,26 @@
+source 'http://rubygems.org'
+gem 'rails'
+
+
+gem 'pg'
+gem 'bootstrap-sass'
+gem 'sass-rails'
+gem 'uglifier', '>= 1.3.0'
+gem 'thin'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
+gem 'devise'
+gem 'paperclip'
+gem 'acts-as-taggable-on'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'haml'
+gem 'searchkick'
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+gem 'bonsai-elasticsearch-rails'
+gem 'ratyrate'
+gem 'rails_admin'

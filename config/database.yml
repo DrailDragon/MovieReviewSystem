@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgres
+  pool: 5
+  timeout: 5000
+  port: 5432
+  user: postgres
+  password: 12345678
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

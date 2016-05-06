@@ -1,0 +1,64 @@
+<div class = "panel panel-default">
+  <div class = "panel-body">
+    <div class = "row">
+      <div class = "col-md-4">
+        <%= image_tag @movie.image.url(:medium) %>
+        <br> <br>
+        <div class = "table-responsive">
+          <table class = "table">
+            <tbody>
+              <tr>
+                <td> <strong> Title: </strong> </td>
+                <td>  <%= @movie.title %> </td>
+              </tr>
+
+              <tr>
+                <td> <strong> Movie length: </strong> </td>
+                <td>  <%= @movie.movie_length %> </td>
+              </tr>
+
+              <tr>
+                <td> <strong> Director: </strong> </td>
+                <td>  <%= @movie.director %> </td>
+              </tr>
+
+              <tr>
+                <td> <strong> Rating </strong> </td>
+                <td>  <%= @movie.rating %> </td>
+              </tr>
+            
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class = "col-md-2">
+                Visual Effects: <%= rating_for @movie, "visual_effects" %>
+                <br>
+                Original Score: <%= rating_for @movie, "original_score" %>
+                <br>
+                Costume Design: <%= rating_for @movie, "costume_design" %>
+                <br>
+                Director: <%= rating_for @movie, "direction" %>
+                <br>
+                Acting: <%= rating_for @movie, "acting" %>
+      </div>
+    <div class = "col-md-6">
+      <h1 class = "review_title"> <%= @movie.title %> </h1>
+      <p> <%= @movie.description %> </p>
+      <% if @reviews.blank? %>
+        <h3> No reviews just yet, add the first!! </h3>
+        <%= link_to "Write review!", new_movie_review_path(@movie), class: "active btn btn-danger" %>
+      <% else %>
+      <h2> Review! </h2>
+        <% @reviews.each do |review| %>
+          <div class = "reviews">
+            <p><%= review.comment %></p>
+          </div>
+        <% end %>
+        <br>
+        <%= link_to "Write review!", new_movie_review_path(@movie), class: "active btn btn-info" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= link_to 'Back', movies_path, class: "btn btn-success active" %>
